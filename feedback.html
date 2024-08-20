@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="java.js">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark shadow">
+
+    <div class="container-fluid">
+
+  <a class=" navbar-brand margin-right-3 font-weight-bold " style="font-family: 'Dancing Script',cursive ; color: #dd4b39; font-size: xx-large;" href="#">
+        <img src="img/logo.jpg" alt="" width="50" height="50" class=" d-inline-block align-text-buttom margin-right-5">
+        ShowTime
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse align-text-center" id="navbarNavDropdown">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-3">
+          <li class="nav-item">
+            <a class="nav-link  " aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="holly.html">Hollywood</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bolly.html">Bollywood</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="series.html">Web Series</a>
+          </li>
+        
+          <li class="nav-item dropdown ">
+            <a class="nav-link  dropdown-toggle" href="genre.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Genre
+            </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              
+             
+             <li>
+              <a href="genre.html#comedy">COMEDY</a>
+             </li> 
+             <li>
+              <a href="genre.html#horror">HORROR</a>
+             </li> 
+             <li>
+              <a href="genre.html#action">ACTION</a>
+             </li> 
+             
+            
+            </ul>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="review.html">Feedback</a>
+          </li>
+
+        </ul>
+        <span class="float-end">
+          <a href="index.html" class="btn btn-large btn-outline-danger">Logout</a>
+        </span>
+      </div>
+    </div>
+  </nav>
+      <br>
+      <div class="b-container"></div>
+      <div class="container" style="background-color:  #000000e9; z-index: 1;height: 110vh; width: 90vh;">
+          <center><div class=" navbar-brand d-script "  href="#">
+              <img src="img/logo.jpg" alt="" width="50" height="40" >
+              ShowTime
+            </div>   </center>
+          <form id="loginForm" >
+            <form id="movieSurveyForm" enctype="multipart/form-data">
+              <h2>Movie Survey Form</h2>
+              
+              <div style="display: flex; align-items: center;">
+                <label for="movieName" style="margin-right: 5px;">Movie :</label>
+                <input type="text" id="movieName" name="movieName" required style="flex: 1;">
+        
+                <label for="genre" style="margin-left: 15px;">Genre:</label>
+                <input type="text" id="genre" name="genre" style="flex: 1;">
+                
+            </div>
+            <label for="comments">Favourite part of movie?:</label>
+            <textarea id="comments" name="comments" rows="2" cols="20"></textarea>
+            <label for="comments">Any Suggestion for Website:</label>
+            <textarea id="comments" name="comments" rows="2" cols="20"></textarea>
+            <label for="age">Enter Your Age:</label>
+            <input type="number" id="age" name="age" required>
+             
+            
+          
+             
+          
+              <label for="movieFile">Upload Movie:</label>
+              <input type="file" id="movieFile" name="movieFile" accept="video/*">
+          
+              <!-- Change type to "button" -->
+              <button type="button" onclick="submitMovieSurvey()">Submit</button>
+          
+              <h5><a href="regis.html" style="color: blue; font-size: 20px;">Create an account</a></h5>
+          </form>
+          
+          </form>
+      </div>
+      
+</body>
+</html>

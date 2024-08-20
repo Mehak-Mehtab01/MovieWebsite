@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <div class="background-container"></div>
+    <div class="container" style="background-color: #000000e9; z-index: 1; height:70vh;">
+        <center>
+            <div class="navbar-brand d-script" href="#">
+                <img src="img/logo.jpg" alt="" width="50" height="40">
+                ShowTime
+            </div>
+        </center>
+        <form id="loginForm">
+            <h2>Login Form</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <!-- Change type to "button" -->
+            <button type="button" onclick="validateLogin()">Login</button>
+            <h5><a href="regis.html" style="color: blue; font-size: 20px;">Create an account</a></h5>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            // Get input values
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Retrieve stored user data from localStorage
+            var storedUser = JSON.parse(localStorage.getItem('registeredUser'));
+
+            if (storedUser) {
+                // Check if the input matches the stored data
+                if (storedUser.username === username && storedUser.password === password) {
+                   
+                    window.location.href = 'home.html';
+                } else {
+                    alert('Incorrect username or password.');
+                }
+            } else {
+                alert('No registered user found. Please register first.');
+            }
+        }
+    </script>
+</body>
+</html>

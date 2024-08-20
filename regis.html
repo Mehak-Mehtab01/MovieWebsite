@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <div class="background-container"></div>
+    <div class="container" style="background-color: #000000e9; z-index: 1;">
+        <center>
+            <div class="navbar-brand d-script" href="#">
+                <img src="img/logo.jpg" alt="" width="50" height="40">
+                ShowTime
+            </div>
+        </center>
+        <form id="registerForm">
+            <h2>Registration Form</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Enter Your Gender:</label>
+            <div>
+                <input type="radio" id="maleRadio" name="gender" value="male">
+                <label for="maleRadio">Male</label>
+                <input type="radio" id="femaleRadio" name="gender" value="female">
+                <label for="femaleRadio">Female</label>
+                <input type="radio" id="otherRadio" name="gender" value="other">
+                <label for="otherRadio">Other</label>
+            </div>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="registerUser()">Register</button>
+            <h5><a href="index.html" style="color: blue; font-size: 20px;">Already have an account? Login here</a></h5>
+        </form>
+    </div>
+
+    <script>
+        function registerUser() {
+            // Get input values
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const gender = document.querySelector('input[name="gender"]:checked')?.value;
+            const password = document.getElementById('password').value;
+
+            // Check if all fields are filled
+            if (!username || !email || !gender || !password) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Store user data in localStorage
+            const user = {
+                username: username,
+                email: email,
+                gender: gender,
+                password: password
+            };
+            localStorage.setItem('registeredUser', JSON.stringify(user));
+                   // Redirect to the login page
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
